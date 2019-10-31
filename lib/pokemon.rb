@@ -29,7 +29,7 @@ class Pokemon
         LIMIT 1 
       SQL
       
-      db.execute(sql, id).map {|row| self.new_from_db(row[0], row[1], row[2])}.first  
+      db.execute(sql, id).map {|row| self.new(row[0], row[1], row[2])}.first  
   end 
     
   
