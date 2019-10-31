@@ -28,7 +28,7 @@ class Pokemon
         WHERE id = ?
         LIMIT 1 
       SQL
-     
+     binding.pry 
       db.execute(sql, id).map {|row| self.new_from_db(row[0], row[1], row[2])}.first  
   end 
     
