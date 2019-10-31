@@ -27,7 +27,7 @@ class Pokemon
       SELECT * FROM pokemon
         WHERE id = ?;
       SQL
-      binding.pry 
+     # binding.pry 
       db.execute(sql, id).map do |row| 
          
         self.new(row[0], row[1], row[2])
